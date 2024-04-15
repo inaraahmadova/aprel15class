@@ -1,4 +1,6 @@
-﻿namespace aprel15class
+﻿using System;
+
+namespace aprel15class
 {
     internal class Program
     {
@@ -11,34 +13,50 @@
             //    Console.WriteLine(test.Arr[i]);
             //}
 
-            
-            foreach (var item in typeof(Test).GetProperties())
-            {
-                Console.WriteLine(item.Name);
-            }
 
+            //foreach (var item in typeof(Test).GetProperties())
+            //{
+            //    Console.WriteLine(item.Name);
+            //}
+
+
+
+            //Person person = CreatePerson();
+
+            //Console.WriteLine(person.Name);
+
+
+            do
+            {
+                Console.WriteLine("Please enter Name:");
+                string name = Console.ReadLine();
+                try
+                {
+                    Person person = new Person(name);
+                    Console.WriteLine(person.Name);
+                    break;
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            } while (true);
 
         }
-        class Test
+        public static Person CreatePerson()
         {
-            public int[] Arr { get; set; }
-            public int this[int i]
+            Console.WriteLine("Please enter Name:");
+            string name = Console.ReadLine();
+            try
             {
-                get
-                {
-                    return Arr[i];
-                }
-                set
-                {
-                    if (value<0)
-                        throw new ArgumentException("deyer 0-dan kicik ola bilmez");
-                    if (i>=Arr.Length) 
-                        throw new IndexOutOfRangeException();
-                }
+                Person person = new Person(name);
+                return person;
             }
-            public Test() 
+            catch (Exception ex)
             {
-                Arr = new int[10];
+                Console.WriteLine(ex.Message);
+                return CreatePerson();
             }
         }
     }

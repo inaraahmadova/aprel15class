@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("aprel15class")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+334d5ada87a94315b4548653d4d7c0631669d107")]
 [assembly: System.Reflection.AssemblyProductAttribute("aprel15class")]
 [assembly: System.Reflection.AssemblyTitleAttribute("aprel15class")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
